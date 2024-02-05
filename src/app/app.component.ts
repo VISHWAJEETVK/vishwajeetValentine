@@ -19,7 +19,7 @@ export class AppComponent {
 ,'Wouldn`t you reconsider?','Is that your final answer?','You`re breaking my heart ;('];
   currentIndex = 0;
   buttonHeight = 34; // Initial height
-  buttonWidth = 50; // Initial width
+  buttonWidth = 54; // Initial width
   yesPressed: boolean | undefined;
 
   toggleBackgroundMusic(): void {
