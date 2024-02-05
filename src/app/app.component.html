@@ -1,0 +1,82 @@
+
+<div (click)="toggleBackgroundMusic()">
+ 
+  
+  <audio #audioPlayer loop>
+    <source src="assets/valentine.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+<div class="happy-valentines">
+  <div class="valentines-day-card">
+    <div class="imageDiv">
+     <img class="bearInitial" *ngIf="yesPressed; else otherImage" src="assets/bear-kiss-bear-kisses.gif" alt="Bear Kisses">
+<ng-template #otherImage>
+  <img class="bearInitial" src="assets/bear-love.gif" alt="Bear Love">
+</ng-template>
+    </div>
+    <div class="clouds"></div>
+    <div class="hearts">
+      <div class="heartOne">
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+      </div>
+      <div class="heartTwo">
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+      </div>
+          <div class="heartThree">
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+      </div>
+       <div class="heartFour">
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+      </div>
+       <div class="heartFive">
+       <div class="left-side"></div>
+        <div class="right-side"></div>
+      </div>
+      <div class="heartSix">
+        <div class="left-side"></div>
+         <div class="right-side"></div>
+       </div>
+       <div class="heartSeven">
+        <div class="left-side"></div>
+         <div class="right-side"></div>
+       </div>
+       <div class="heartEight">
+        <div class="left-side"></div>
+         <div class="right-side"></div>
+       </div>
+    </div>
+    <div class="text">
+      
+      <span *ngIf="!yesPressed">Happy Valentine's Day Poli &#10084;</span>
+      <span *ngIf="yesPressed">Remember not to eat too much candy—you're sweet enough already.</span>
+      
+    </div>
+
+    <div class="text2">
+      
+      <span *ngIf="!yesPressed">Will you be my Valentine?</span>
+      <span *ngIf="yesPressed">Okie Yayyy!</span>
+      <br><br>
+
+
+      <div style="margin-top: 20px;">
+        <button class="button-54" role="button" [style.height.px]="buttonHeight" [style.width.px]="buttonWidth" (click)="yayy()">
+          Yes</button>
+      </div>
+      <div style="margin-top: 10px;">
+        <button class="button-54" role="button" style="background-color: #cc4f64;" (click)="changeButtonText()" 
+       >{{ NoButtonNames[currentIndex] }}</button>
+      </div>
+
+
+    </div>
+  
+  
+  
+</div>
+
